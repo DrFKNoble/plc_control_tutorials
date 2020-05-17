@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Refactors>
+  <Renames>
+    <RenamedType>
+      <Type guid="a7bc8c9c-4397-486a-a62a-b4f742da07ae">MUL3_FUN</Type>
+      <From>MUL3</From>
+      <To>MUL3</To>
+    </RenamedType>
+  </Renames>
+</Refactors>

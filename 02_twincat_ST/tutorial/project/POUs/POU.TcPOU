@@ -171,6 +171,9 @@ IF (tmr1.ET >= T#3S) THEN
 	D := TRUE;
 END_IF
 
+// Using a function
+
+f := MUL3(1.0, 2.0, 3.0);
 
 
 ]]></ST>
@@ -289,7 +292,10 @@ END_IF
       <LineId Id="460" Count="0" />
       <LineId Id="383" Count="0" />
       <LineId Id="461" Count="1" />
+      <LineId Id="512" Count="0" />
       <LineId Id="411" Count="0" />
+      <LineId Id="514" Count="0" />
+      <LineId Id="513" Count="0" />
       <LineId Id="410" Count="0" />
       <LineId Id="408" Count="0" />
       <LineId Id="407" Count="0" />
