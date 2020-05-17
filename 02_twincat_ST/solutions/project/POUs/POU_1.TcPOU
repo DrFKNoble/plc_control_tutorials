@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="POU_1" Id="{0092da42-47c0-4849-9c55-1c574ee8f141}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM POU_1
+VAR
+	
+	objectDetected : BOOL := FALSE;
+
+	blackObject : BOOL := FALSE;	
+	redObject : BOOL := FALSE;
+	
+	motorOn : BOOL := FALSE;
+	actuatorMove : BOOL := FALSE;
+	
+	objectSorted : BOOL := FALSE;
+	
+	startTimer : BOOL := FALSE;
+	TON_0 : TON;	
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="POU_1">
+      <LineId Id="33" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
