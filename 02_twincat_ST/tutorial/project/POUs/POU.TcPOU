@@ -23,6 +23,10 @@ VAR
 	
 	tmr1 : TON;
 	
+	user : I_NAME;
+	name : FB_NAME;
+	
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -175,6 +179,13 @@ END_IF
 
 f := MUL3(1.0, 2.0, 3.0);
 
+// Using an interface
+
+user := name;
+user.Name := 'John';
+i := user.NUM();
+
+
 
 ]]></ST>
     </Implementation>
@@ -296,6 +307,13 @@ f := MUL3(1.0, 2.0, 3.0);
       <LineId Id="411" Count="0" />
       <LineId Id="514" Count="0" />
       <LineId Id="513" Count="0" />
+      <LineId Id="547" Count="0" />
+      <LineId Id="546" Count="0" />
+      <LineId Id="549" Count="0" />
+      <LineId Id="548" Count="0" />
+      <LineId Id="550" Count="0" />
+      <LineId Id="552" Count="0" />
+      <LineId Id="551" Count="0" />
       <LineId Id="410" Count="0" />
       <LineId Id="408" Count="0" />
       <LineId Id="407" Count="0" />
