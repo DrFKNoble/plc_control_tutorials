@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="FB_NAME" Id="{6065e354-1a05-4951-89a0-632450cfdc72}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_NAME IMPLEMENTS I_NAME
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	m_name : STRING := 'User';
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Name" Id="{5134a08f-f1f4-4615-ba9d-b2beb341aced}">
+      <Declaration><![CDATA[{warning 'add property implementation'}
+PROPERTY Name : STRING
+]]></Declaration>
+      <Get Name="Get" Id="{0513b7b3-99f5-4c87-8f0f-784bb4c25382}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Name := m_name;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{12196984-e221-4b12-a66b-356157a167b0}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[m_name := Name;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="NUM" Id="{0d51eca5-f55c-4988-9e77-8cd2ef944f9d}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD NUM : INT
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[NUM := LEN(m_name);]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_NAME">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_NAME.Name.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_NAME.Name.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_NAME.NUM">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

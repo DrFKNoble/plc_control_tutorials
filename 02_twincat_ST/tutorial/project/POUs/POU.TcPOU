@@ -21,7 +21,7 @@ VAR
 	res : REAL := 0.0;
 	test : BOOL := FALSE;
 	
-	tmr1 : TON;
+	TON_0 : TON;
 	
 	user : I_NAME;
 	name : FB_NAME;
@@ -169,9 +169,9 @@ END_REPEAT
 // Timer
 
 D := FALSE;
-tmr1(IN := TRUE, PT := T#5S);
+TON_0(IN := TRUE, PT := T#5S);
 
-IF (tmr1.ET >= T#3S) THEN
+IF (TON_0.ET >= T#3S) THEN
 	D := TRUE;
 END_IF
 
