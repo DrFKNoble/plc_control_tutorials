@@ -1,5 +1,6 @@
-#include <iostream>
 #include <algorithm>
+#include <boost/asio.hpp>
+#include <iostream>
 
 int main(int argc, char* argv)
 {
@@ -123,5 +124,13 @@ int main(int argc, char* argv)
         }
     }
 
+    // Timing
+
+    boost::asio::io_context io;
+
+    boost::asio::steady_timer t(io, boost::asio::chrono::seconds(5));
+
+    t.wait();
+   
     return 0;
 }
