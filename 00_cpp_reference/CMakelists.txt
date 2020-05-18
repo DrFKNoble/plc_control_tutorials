@@ -1,0 +1,13 @@
+project(cpp_reference)
+
+add_executable(logic logic.cpp)
+add_executable(reference reference.cpp)
+
+# utilities
+
+# build
+
+# install
+
+install(TARGETS logic DESTINATION ${PROJECT_SOURCE_DIR}/bin)
+install(TARGETS reference DESTINATION ${PROJECT_SOURCE_DIR}/bin)
