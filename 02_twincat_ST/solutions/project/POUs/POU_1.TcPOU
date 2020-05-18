@@ -20,10 +20,55 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[TON_0(IN := startTimer, PT := T#5S);
+
+IF objectDetected = TRUE THEN
+	
+	objectSorted := FALSE;
+	
+	IF redObject = TRUE THEN
+		actuatorMove := TRUE;
+	END_IF	
+
+	startTimer := TRUE;
+	motorOn := TRUE;
+
+END_IF
+
+IF TON_0.ET > T#1S THEN	
+	
+	motorOn := FALSE;
+	startTimer := FALSE;
+	actuatorMove := FALSE;
+	
+	objectSorted := TRUE;
+	
+END_IF
+
+]]></ST>
     </Implementation>
     <LineIds Name="POU_1">
+      <LineId Id="53" Count="0" />
+      <LineId Id="80" Count="0" />
       <LineId Id="33" Count="0" />
+      <LineId Id="78" Count="1" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="66" Count="2" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="59" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="73" Count="0" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="71" Count="1" />
+      <LineId Id="76" Count="1" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="55" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
